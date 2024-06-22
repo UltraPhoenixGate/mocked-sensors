@@ -1,0 +1,19 @@
+{
+  "name": "mocked-sensors",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run index.ts --watch",
+    "start": "bun run index.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "fastify": "^4.28.0",
+    "pino-pretty": "^11.2.1"
+  }
+}

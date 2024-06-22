@@ -1,0 +1,7 @@
+{
+  "cSpell.words": ["fastify"],
+  // format on save
+  "editor.formatOnSave": true,
+  // 默认使用的格式化工具
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+}
