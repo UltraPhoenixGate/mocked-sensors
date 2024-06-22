@@ -1,4 +1,3 @@
-// ESM
 import Fastify from "fastify";
 import {
   handelAirQualitySensor,
@@ -6,6 +5,7 @@ import {
   handelLightSensor,
   handelTemperatureHumiditySensor,
 } from "./sensors";
+import cors from "@fastify/cors";
 
 const fastify = Fastify({
   logger: {
@@ -13,6 +13,10 @@ const fastify = Fastify({
       target: "pino-pretty",
     },
   },
+});
+
+await fastify.register(cors, {
+  origin: "*",
 });
 
 fastify.get("/", (request, reply) => {
