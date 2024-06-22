@@ -19,13 +19,10 @@ fastify.get("/", (request, reply) => {
   reply.send({ hello: "world" });
 });
 
-fastify.get(
-  "/data/temperature-humidity-sensor",
-  handelTemperatureHumiditySensor
-);
-fastify.get("/data/light-sensor", handelLightSensor);
-fastify.get("/data/air-quality-sensor", handelAirQualitySensor);
-fastify.get("/data/human-sensor", handelHumanSensor);
+fastify.get("/data/temperature-humidity", handelTemperatureHumiditySensor);
+fastify.get("/data/light", handelLightSensor);
+fastify.get("/data/air-quality", handelAirQualitySensor);
+fastify.get("/data/human", handelHumanSensor);
 
 process.on("SIGINT", async () => {
   await fastify.close();
