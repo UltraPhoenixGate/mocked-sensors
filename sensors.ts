@@ -36,8 +36,8 @@ export function handelTemperatureHumiditySensor(
 
   reply.send({
     data: {
-      temperature: lastTemperature.toFixed(1),
-      humidity: lastHumidity.toFixed(1),
+      temperature: Number(lastTemperature.toFixed(1)),
+      humidity: Number(lastHumidity.toFixed(1)),
     },
     labels: {},
   });
